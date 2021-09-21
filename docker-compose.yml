@@ -1,0 +1,11 @@
+version: "3"
+
+services: 
+  voltz_cnab400_bb_remessa:
+    build: .
+    command: npm run start:dev
+    ports: 
+      - "3008:3000"
+    volumes: 
+      - .:/opt/docker_files/cnab400_bb_remessa
+      - /opt/docker_files/cnab400_bb_remessa/node_modules
